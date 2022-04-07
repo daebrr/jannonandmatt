@@ -1,0 +1,283 @@
+// Imports
+@import "variables";
+
+// General styles
+
+body {
+	margin: 0 auto;
+}
+
+.row {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	.column {
+		// flex: 50%;
+
+		@media only screen and (max-width: 600px) {
+			flex: 100%;
+		}
+	}
+}
+
+.hide {
+	display: none;
+}
+
+.button {
+	font-size: 18px;
+	font-family: "Cormorant Garamond", serif;
+	color: $white;
+	background-color: $black;
+	border-radius: 10000px;
+	border: none;
+	padding: 16px 2px;
+	width: 200px;
+
+	&:hover {
+		opacity: 75%;
+		cursor: pointer;
+	}
+}
+
+// Type
+
+@font-face {
+	font-family: "hello_honey_-_personal_useRg";
+	src: url("/fonts/hello_honey-webfont.woff2") format("woff2"), url("/fonts/hello_honey-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+h1 {
+	font-family: "Style Script", cursive;
+	// font-family: "hello_honey_-_personal_useRg";
+	font-size: 60px;
+	color: $white;
+}
+
+h2 {
+	font-family: "Style Script", cursive;
+	font-size: 48px;
+}
+
+h3 {
+	font-family: "Cormorant Garamond", serif;
+	font-size: 24px;
+	line-height: 12px;
+}
+
+// Nav
+
+.links {
+	width: 100%;
+	text-align: right;
+	position: fixed;
+	z-index: 10000;
+	background-color: $white;
+	padding: 16px 8px;
+
+	a {
+		text-decoration: none;
+		font-family: "Cormorant Garamond", serif;
+		font-size: 18px;
+		font-weight: 700;
+		color: $black;
+		padding: 16px 8px;
+
+		&:hover {
+			opacity: 75%;
+		}
+
+		&:last-child {
+			padding-right: 40px;
+		}
+	}
+}
+
+// Parallax
+
+main {
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	perspective: 2px;
+}
+
+section {
+	transform-style: preserve-3d;
+	height: 100vh;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+.no-parallax {
+	z-index: 999;
+	background-color: $white;
+
+	@media only screen and (max-width: 414px) {
+		height: auto !important;
+	}
+}
+
+section h1 h2 {
+	text-align: center;
+	font-size: 4rem;
+}
+
+.parallax h1 h2 {
+	width: 60%;
+	font-size: 2rem;
+}
+
+.parallax::after {
+	content: " ";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform: translateZ(-1px) scale(1.5);
+	background-size: 100%;
+	z-index: -1;
+}
+
+.bg::after {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://picsum.photos/1080/720");
+	background-size: cover;
+}
+
+// Hero
+
+// .hero {
+// 	background-color: $blush;
+// 	background-image: url("images/Chicago.png");
+// }
+
+// Story
+
+.story {
+	padding: 0 24px 24px;
+	background-color: $blush;
+
+	.column {
+		flex: initial;
+	}
+
+	.story-circles {
+		text-align: center;
+		justify-content: center;
+
+		.circle {
+			display: inline-block;
+			margin: 0 8px;
+
+			p {
+				max-width: 200px;
+			}
+
+			.story-image {
+				margin: 0 auto;
+				background-color: $cream;
+				border-radius: 10000px;
+				width: 144px;
+				height: 144px;
+			}
+		}
+	}
+}
+
+// Wedding
+
+.wedding {
+	// background-color: $blue;
+	padding: 40px 24px;
+
+	.row {
+		@media only screen and (min-width: 1024px) {
+			width: 80%;
+		}
+	}
+
+	a {
+		color: $black;
+	}
+
+	.wedding-illustration {
+		img {
+			max-width: 600px;
+		}
+	}
+}
+
+// rsvp
+
+.rsvp {
+	background-color: $mustard;
+	text-align: center;
+
+	@media only screen and (max-width: 414px) {
+		margin-bottom: 40px;
+	}
+}
+
+// Modal
+
+@keyframes lightbox-fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 100%;
+	}
+}
+
+#rsvpOpened {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	margin: 0 auto;
+	background-color: $white;
+	z-index: 100;
+	animation-name: lightbox-fade-in;
+	animation-duration: 0.25s;
+	animation-timing-function: ease-in-out;
+}
+
+.lightbox_content {
+	overflow: scroll;
+	width: 100%;
+	height: 100%;
+	background: $white;
+
+	.rsvp-content {
+		h3,
+		p {
+			padding: 10px 24px;
+		}
+	}
+}
+
+.close {
+	font-size: 2rem;
+	color: $black;
+	margin: 24px 24px 0;
+	display: block;
+	text-align: right;
+	width: 24px;
+	float: right;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
