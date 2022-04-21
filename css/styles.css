@@ -27,15 +27,9 @@ body {
     opacity: 75%;
     cursor: pointer; }
 
-@font-face {
-  font-family: "hello_honey_-_personal_useRg";
-  src: url("/fonts/hello_honey-webfont.woff2") format("woff2"), url("/fonts/hello_honey-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
 h1 {
   font-family: "Style Script", cursive;
-  font-size: 60px;
+  font-size: 120px;
   color: #ffffff; }
 
 h2 {
@@ -122,15 +116,23 @@ section h1 h2 {
     justify-content: center; }
     .story .story-circles .circle {
       display: inline-block;
-      margin: 0 8px; }
+      margin: 0 24px; }
       .story .story-circles .circle p {
         max-width: 200px; }
       .story .story-circles .circle .story-image {
         margin: 0 auto;
-        background-color: #F6F2E7;
+        background-color: #ffffff;
         border-radius: 10000px;
-        width: 144px;
-        height: 144px; }
+        width: 200px;
+        height: 200px; }
+        .story .story-circles .circle .story-image img {
+          width: 200px;
+          height: 200px;
+          border-radius: 100%; }
+          .story .story-circles .circle .story-image img.austin {
+            width: 184px;
+            height: 184px;
+            padding-top: 8px; }
 
 .wedding {
   padding: 40px 24px; }
@@ -138,9 +140,12 @@ section h1 h2 {
     .wedding .row {
       width: 80%; } }
   .wedding a {
-    color: #252525; }
+    color: #ffffff; }
   .wedding .wedding-illustration img {
     max-width: 600px; }
+  .wedding h2,
+  .wedding p {
+    color: #ffffff; }
 
 .rsvp {
   background-color: #C18E50;

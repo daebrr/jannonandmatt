@@ -45,17 +45,17 @@ body {
 
 // Type
 
-@font-face {
-	font-family: "hello_honey_-_personal_useRg";
-	src: url("/fonts/hello_honey-webfont.woff2") format("woff2"), url("/fonts/hello_honey-webfont.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
-}
+// @font-face {
+// 	font-family: "hello_honey_-_personal_useRg";
+// 	src: url("/fonts/hello_honey-webfont.woff2") format("woff2"), url("/fonts/hello_honey-webfont.woff") format("woff");
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
 
 h1 {
 	font-family: "Style Script", cursive;
 	// font-family: "hello_honey_-_personal_useRg";
-	font-size: 60px;
+	font-size: 120px;
 	color: $white;
 }
 
@@ -177,7 +177,7 @@ section h1 h2 {
 
 		.circle {
 			display: inline-block;
-			margin: 0 8px;
+			margin: 0 24px;
 
 			p {
 				max-width: 200px;
@@ -185,10 +185,22 @@ section h1 h2 {
 
 			.story-image {
 				margin: 0 auto;
-				background-color: $cream;
+				background-color: $white;
 				border-radius: 10000px;
-				width: 144px;
-				height: 144px;
+				width: 200px;
+				height: 200px;
+
+				img {
+					width: 200px;
+					height: 200px;
+					border-radius: 100%;
+
+					&.austin {
+						width: 184px;
+						height: 184px;
+						padding-top: 8px;
+					}
+				}
 			}
 		}
 	}
@@ -207,13 +219,18 @@ section h1 h2 {
 	}
 
 	a {
-		color: $black;
+		color: $white;
 	}
 
 	.wedding-illustration {
 		img {
 			max-width: 600px;
 		}
+	}
+
+	h2,
+	p {
+		color: $white;
 	}
 }
 
