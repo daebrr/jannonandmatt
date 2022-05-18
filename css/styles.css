@@ -63,6 +63,9 @@ p {
       opacity: 75%; }
     .links a:last-child {
       padding-right: 40px; }
+  @media only screen and (max-width: 731px) {
+    .links {
+      text-align: center; } }
 
 main {
   height: 100vh;
@@ -109,11 +112,13 @@ h1
 
 .bg::after {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/county-line.jpg");
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
 
 .bg2::after {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/chicago.jpg");
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
 
 .story {
   padding: 0 24px 24px;
@@ -155,6 +160,10 @@ h1
   .wedding h2,
   .wedding p {
     color: #ffffff; }
+    @media only screen and (max-width: 731px) {
+      .wedding h2,
+      .wedding p {
+        text-align: center; } }
 
 .rsvp {
   background-color: #C18E50;
@@ -201,3 +210,71 @@ h1
   float: right; }
   .close:hover {
     cursor: pointer; }
+
+.heart-button {
+  background: none;
+  border: none;
+  position: relative;
+  width: 8rem;
+  height: 3rem; }
+  .heart-button:hover .content {
+    color: #C18E50;
+    font-size: 12px;
+    top: -16px; }
+  .heart-button:hover .left {
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    border-top-right-radius: 0.5rem;
+    transform: rotate(45deg);
+    top: 0.75rem;
+    left: 0.5rem; }
+  .heart-button:hover .right {
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    border-top-left-radius: 0.5rem;
+    transform: rotate(-45deg);
+    top: 0.75rem;
+    right: 0.5rem; }
+
+.left,
+.right,
+.content {
+  transition: 0.25s ease-in-out all;
+  cursor: pointer; }
+
+.left {
+  background: #2c2a2a;
+  position: absolute;
+  left: 0;
+  right: 50%;
+  top: 0;
+  bottom: 0;
+  z-index: 50;
+  transform-origin: bottom right;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem; }
+
+.right {
+  background: #2c2a2a;
+  position: absolute;
+  right: 0;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  z-index: 50;
+  transform-origin: bottom left;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem; }
+
+.content {
+  font-size: 16px;
+  color: #ffffff;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
