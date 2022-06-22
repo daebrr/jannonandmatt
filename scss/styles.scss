@@ -53,14 +53,14 @@ body {
 // }
 
 h1 {
-	font-family: 'Rochester', cursive;
+	font-family: "Rochester", cursive;
 	font-size: 90px;
 	color: $white;
 	text-align: center;
 }
 
 h2 {
-	font-family: 'Rochester', cursive;
+	font-family: "Rochester", cursive;
 	font-size: 48px;
 }
 
@@ -117,30 +117,31 @@ main {
 
 section {
 	transform-style: preserve-3d;
-	height: 100vh;
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	align-content: center;
 	justify-content: center;
+	height: 100vh;
+
+	@media only screen and (max-width: 466px) {
+		height: auto;
+	}
+
 }
 
 .no-parallax {
 	z-index: 999;
 	background-color: $white;
 
-	@media only screen and (max-width: 414px) {
-		height: auto !important;
-	}
 }
 
 section h1 h2 {
 	text-align: center;
 	font-size: 3rem;
 }
-h1
-.parallax h1 h2 {
+h1 .parallax h1 h2 {
 	width: 60%;
 	font-size: 2rem;
 }
@@ -196,26 +197,26 @@ h1
 			margin: 0 24px;
 
 			p {
-				max-width: 200px;
+				max-width: 150px;
 			}
 
 			.story-image {
 				margin: 0 auto;
 				background-color: $white;
 				border-radius: 10000px;
-				width: 200px;
-				height: 200px;
+				width: 150px;
+				height: 150px;
 
 				img {
-					width: 200px;
-					height: 200px;
+					width: 150px;
+					height: 150px;
 					border-radius: 100%;
 
-					&.austin {
-						width: 184px;
-						height: 184px;
-						padding-top: 8px;
-					}
+					// &.austin {
+					// 	width: 184px;
+					// 	height: 184px;
+					// 	padding-top: 8px;
+					// }
 				}
 			}
 		}
@@ -251,7 +252,6 @@ h1
 		@media only screen and (max-width: 731px) {
 			text-align: center;
 		}
-
 	}
 }
 
@@ -320,10 +320,7 @@ h1
 	}
 }
 
-
-
 // CSS animation
-
 
 .heart-button {
 	background: none;
@@ -391,7 +388,7 @@ h1
 
 .content {
 	font-size: 16px;
-	color:$white;
+	color: $white;
 	position: absolute;
 	z-index: 100;
 	left: 0;

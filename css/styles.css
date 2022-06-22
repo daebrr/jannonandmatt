@@ -28,13 +28,13 @@ body {
     cursor: pointer; }
 
 h1 {
-  font-family: 'Rochester', cursive;
+  font-family: "Rochester", cursive;
   font-size: 90px;
   color: #ffffff;
   text-align: center; }
 
 h2 {
-  font-family: 'Rochester', cursive;
+  font-family: "Rochester", cursive;
   font-size: 48px; }
 
 h3 {
@@ -75,27 +75,26 @@ main {
 
 section {
   transform-style: preserve-3d;
-  height: 100vh;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
-  justify-content: center; }
+  justify-content: center;
+  height: 100vh; }
+  @media only screen and (max-width: 466px) {
+    section {
+      height: auto; } }
 
 .no-parallax {
   z-index: 999;
   background-color: #ffffff; }
-  @media only screen and (max-width: 414px) {
-    .no-parallax {
-      height: auto !important; } }
 
 section h1 h2 {
   text-align: center;
   font-size: 3rem; }
 
-h1
-.parallax h1 h2 {
+h1 .parallax h1 h2 {
   width: 60%;
   font-size: 2rem; }
 
@@ -132,21 +131,17 @@ h1
       display: inline-block;
       margin: 0 24px; }
       .story .story-circles .circle p {
-        max-width: 200px; }
+        max-width: 150px; }
       .story .story-circles .circle .story-image {
         margin: 0 auto;
         background-color: #ffffff;
         border-radius: 10000px;
-        width: 200px;
-        height: 200px; }
+        width: 150px;
+        height: 150px; }
         .story .story-circles .circle .story-image img {
-          width: 200px;
-          height: 200px;
+          width: 150px;
+          height: 150px;
           border-radius: 100%; }
-          .story .story-circles .circle .story-image img.austin {
-            width: 184px;
-            height: 184px;
-            padding-top: 8px; }
 
 .wedding {
   padding: 40px 24px; }
