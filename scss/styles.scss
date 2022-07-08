@@ -182,7 +182,7 @@ h1 .parallax h1 h2 {
 
 .story {
 	padding: 0 24px 24px;
-	background-color: $blush;
+	background-image: linear-gradient(to bottom, $blush, #DFBEB6);
 
 	.column {
 		flex: initial;
@@ -258,7 +258,7 @@ h1 .parallax h1 h2 {
 // rsvp
 
 .rsvp {
-	background-color: $mustard;
+	background-image: linear-gradient(to bottom, #D6AD6F, $mustard);
 	text-align: center;
 
 	@media only screen and (max-width: 414px) {

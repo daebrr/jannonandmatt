@@ -121,7 +121,7 @@ h1 .parallax h1 h2 {
 
 .story {
   padding: 0 24px 24px;
-  background-color: #E9CFC6; }
+  background-image: linear-gradient(to bottom, #E9CFC6, #DFBEB6); }
   .story .column {
     flex: initial; }
   .story .story-circles {
@@ -161,7 +161,7 @@ h1 .parallax h1 h2 {
         text-align: center; } }
 
 .rsvp {
-  background-color: #C18E50;
+  background-image: linear-gradient(to bottom, #D6AD6F, #C18E50);
   text-align: center; }
   @media only screen and (max-width: 414px) {
     .rsvp {
