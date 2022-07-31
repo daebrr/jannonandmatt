@@ -57,6 +57,10 @@ h1 {
 	font-size: 90px;
 	color: $white;
 	text-align: center;
+
+	@media only screen and (max-width: 466px) {
+		font-size: 82px;
+	}
 }
 
 h2 {
@@ -128,13 +132,11 @@ section {
 	@media only screen and (max-width: 466px) {
 		height: auto;
 	}
-
 }
 
 .no-parallax {
 	z-index: 999;
 	background-color: $white;
-
 }
 
 section h1 h2 {
@@ -159,15 +161,23 @@ h1 .parallax h1 h2 {
 }
 
 .bg::after {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/county-line.jpg");
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/pugs.jpg");
 	background-size: cover;
 	background-position: center;
+	@media only screen and (max-width: 480px) {
+		bottom: -100px;
+	}
 }
 
 .bg2::after {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/chicago.jpg");
+	background: url("../images/chicago.jpg");
 	background-size: cover;
 	background-position: center;
+
+	@media only screen and (max-width: 480px) {
+		background-position: unset;
+		top: -37px;
+	}
 }
 
 // Hero
@@ -182,7 +192,7 @@ h1 .parallax h1 h2 {
 
 .story {
 	padding: 0 24px 24px;
-	background-image: linear-gradient(to bottom, $blush, #DFBEB6);
+	background-image: linear-gradient(to bottom, $blush, #dfbeb6);
 
 	.column {
 		flex: initial;
@@ -242,6 +252,10 @@ h1 .parallax h1 h2 {
 	.wedding-illustration {
 		img {
 			width: 400px;
+
+			@media only screen and (max-width: 480px) {
+				display: none;
+			}
 		}
 	}
 
@@ -258,8 +272,9 @@ h1 .parallax h1 h2 {
 // rsvp
 
 .rsvp {
-	background-image: linear-gradient(to bottom, #D6AD6F, $mustard);
+	background-image: linear-gradient(to bottom, #d6ad6f, $mustard);
 	text-align: center;
+	min-height: 300px;
 
 	@media only screen and (max-width: 414px) {
 		padding-bottom: 40px;

@@ -32,6 +32,9 @@ h1 {
   font-size: 90px;
   color: #ffffff;
   text-align: center; }
+  @media only screen and (max-width: 466px) {
+    h1 {
+      font-size: 82px; } }
 
 h2 {
   font-family: "Rochester", cursive;
@@ -110,18 +113,25 @@ h1 .parallax h1 h2 {
   z-index: -1; }
 
 .bg::after {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/county-line.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/pugs.jpg");
   background-size: cover;
   background-position: center; }
+  @media only screen and (max-width: 480px) {
+    .bg::after {
+      bottom: -100px; } }
 
 .bg2::after {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/chicago.jpg");
+  background: url("../images/chicago.jpg");
   background-size: cover;
   background-position: center; }
+  @media only screen and (max-width: 480px) {
+    .bg2::after {
+      background-position: unset;
+      top: -37px; } }
 
 .story {
   padding: 0 24px 24px;
-  background-image: linear-gradient(to bottom, #E9CFC6, #DFBEB6); }
+  background-image: linear-gradient(to bottom, #E9CFC6, #dfbeb6); }
   .story .column {
     flex: initial; }
   .story .story-circles {
@@ -152,6 +162,9 @@ h1 .parallax h1 h2 {
     color: #ffffff; }
   .wedding .wedding-illustration img {
     width: 400px; }
+    @media only screen and (max-width: 480px) {
+      .wedding .wedding-illustration img {
+        display: none; } }
   .wedding h2,
   .wedding p {
     color: #ffffff; }
@@ -161,8 +174,9 @@ h1 .parallax h1 h2 {
         text-align: center; } }
 
 .rsvp {
-  background-image: linear-gradient(to bottom, #D6AD6F, #C18E50);
-  text-align: center; }
+  background-image: linear-gradient(to bottom, #d6ad6f, #C18E50);
+  text-align: center;
+  min-height: 300px; }
   @media only screen and (max-width: 414px) {
     .rsvp {
       padding-bottom: 40px; } }
