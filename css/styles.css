@@ -124,10 +124,6 @@ h1 .parallax h1 h2 {
   background: url("../images/carousel/carousel4.jpg");
   background-size: cover;
   background-position: center; }
-  @media only screen and (max-width: 480px) {
-    .bg2::after {
-      background-position: unset;
-      top: -37px; } }
 
 .story {
   padding: 0 24px 24px;
