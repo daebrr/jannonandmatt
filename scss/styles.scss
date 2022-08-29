@@ -161,16 +161,16 @@ h1 .parallax h1 h2 {
 }
 
 .bg::after {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/pugs.jpg");
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/carousel/carousel5.jpg");
 	background-size: cover;
 	background-position: center;
 	@media only screen and (max-width: 480px) {
 		bottom: -100px;
-	}
+	} 
 }
 
 .bg2::after {
-	background: url("../images/chicago.jpg");
+	background: url("../images/carousel/carousel4.jpg");
 	background-size: cover;
 	background-position: center;
 
