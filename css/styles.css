@@ -1,18 +1,23 @@
 body {
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .row {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; }
-  @media only screen and (max-width: 600px) {
-    .row .column {
-      flex: 100%; } }
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 600px) {
+  .row .column {
+    flex: 100%;
+  }
+}
 
 .hide {
-  display: none; }
+  display: none;
+}
 
 .button {
   font-size: 18px;
@@ -22,31 +27,39 @@ body {
   border-radius: 10000px;
   border: none;
   padding: 16px 2px;
-  width: 200px; }
-  .button:hover {
-    opacity: 75%;
-    cursor: pointer; }
+  width: 200px;
+}
+.button:hover {
+  opacity: 75%;
+  cursor: pointer;
+}
 
 h1 {
   font-family: "Rochester", cursive;
   font-size: 90px;
   color: #ffffff;
-  text-align: center; }
-  @media only screen and (max-width: 466px) {
-    h1 {
-      font-size: 82px; } }
+  text-align: center;
+}
+@media only screen and (max-width: 466px) {
+  h1 {
+    font-size: 82px;
+  }
+}
 
 h2 {
   font-family: "Rochester", cursive;
-  font-size: 48px; }
+  font-size: 48px;
+}
 
 h3 {
   font-family: "Cormorant Garamond", serif;
   font-size: 24px;
-  line-height: 12px; }
+  line-height: 12px;
+}
 
 p {
-  color: #2c2a2a; }
+  color: #2c2a2a;
+}
 
 .links {
   width: 100%;
@@ -54,27 +67,45 @@ p {
   position: fixed;
   z-index: 10000;
   background-color: #ffffff;
-  padding: 16px 8px; }
-  .links a {
-    text-decoration: none;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: #2c2a2a;
-    padding: 16px 8px; }
-    .links a:hover {
-      opacity: 75%; }
-    .links a:last-child {
-      padding-right: 40px; }
-  @media only screen and (max-width: 731px) {
-    .links {
-      text-align: center; } }
+  padding: 8px 0;
+}
+.links .link-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+.links .link-wrapper a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2c2a2a;
+  padding: 16px 12px;
+}
+.links .link-wrapper a:hover {
+  opacity: 75%;
+}
+.links .link-wrapper:last-child {
+  padding-right: 40px;
+}
+@media only screen and (max-width: 731px) {
+  .links .link-wrapper:last-child {
+    padding-right: 0;
+  }
+}
+@media only screen and (max-width: 731px) {
+  .links {
+    text-align: center;
+  }
+}
 
 main {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  perspective: 2px; }
+  perspective: 2px;
+}
 
 section {
   transform-style: preserve-3d;
@@ -84,22 +115,28 @@ section {
   align-items: center;
   align-content: center;
   justify-content: center;
-  height: 100vh; }
-  @media only screen and (max-width: 466px) {
-    section {
-      height: auto; } }
+  height: 100vh;
+}
+@media only screen and (max-width: 466px) {
+  section {
+    height: auto;
+  }
+}
 
 .no-parallax {
   z-index: 999;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+}
 
 section h1 h2 {
   text-align: center;
-  font-size: 3rem; }
+  font-size: 3rem;
+}
 
 h1 .parallax h1 h2 {
   width: 60%;
-  font-size: 2rem; }
+  font-size: 2rem;
+}
 
 .parallax::after {
   content: " ";
@@ -110,79 +147,106 @@ h1 .parallax h1 h2 {
   left: 0;
   transform: translateZ(-1px) scale(1.5);
   background-size: 100%;
-  z-index: -1; }
+  z-index: -1;
+}
 
 .bg::after {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/carousel/carousel5.jpg");
   background-size: cover;
-  background-position: center; }
-  @media only screen and (max-width: 480px) {
-    .bg::after {
-      bottom: -100px; } }
+  background-position: center;
+}
+@media only screen and (max-width: 480px) {
+  .bg::after {
+    bottom: -100px;
+  }
+}
 
 .bg2::after {
   background: url("../images/carousel/carousel4.jpg");
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+}
 
 .story {
   padding: 0 24px 24px;
-  background-image: linear-gradient(to bottom, #E9CFC6, #dfbeb6); }
-  .story .column {
-    flex: initial; }
-  .story .story-circles {
-    text-align: center;
-    justify-content: center; }
-    .story .story-circles .circle {
-      display: inline-block;
-      margin: 0 24px; }
-      .story .story-circles .circle p {
-        max-width: 150px; }
-      .story .story-circles .circle .story-image {
-        margin: 0 auto;
-        background-color: #ffffff;
-        border-radius: 10000px;
-        width: 150px;
-        height: 150px; }
-        .story .story-circles .circle .story-image img {
-          width: 150px;
-          height: 150px;
-          border-radius: 100%; }
+  background-image: linear-gradient(to bottom, #E9CFC6, #dfbeb6);
+}
+.story .column {
+  flex: initial;
+}
+.story .story-circles {
+  text-align: center;
+  justify-content: center;
+}
+.story .story-circles .circle {
+  display: inline-block;
+  margin: 0 24px;
+}
+.story .story-circles .circle p {
+  max-width: 150px;
+}
+.story .story-circles .circle .story-image {
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10000px;
+  width: 150px;
+  height: 150px;
+}
+.story .story-circles .circle .story-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
 
 .wedding {
-  padding: 40px 24px; }
-  @media only screen and (min-width: 1024px) {
-    .wedding .row {
-      width: 80%; } }
-  .wedding a {
-    color: #ffffff; }
+  padding: 40px 24px;
+}
+@media only screen and (min-width: 1024px) {
+  .wedding .row {
+    width: 80%;
+  }
+}
+.wedding a {
+  color: #ffffff;
+}
+.wedding .wedding-illustration img {
+  width: 400px;
+}
+@media only screen and (max-width: 480px) {
   .wedding .wedding-illustration img {
-    width: 400px; }
-    @media only screen and (max-width: 480px) {
-      .wedding .wedding-illustration img {
-        display: none; } }
+    display: none;
+  }
+}
+.wedding h2,
+.wedding p {
+  color: #ffffff;
+}
+@media only screen and (max-width: 731px) {
   .wedding h2,
   .wedding p {
-    color: #ffffff; }
-    @media only screen and (max-width: 731px) {
-      .wedding h2,
-      .wedding p {
-        text-align: center; } }
+    text-align: center;
+  }
+}
 
 .rsvp {
   background-image: linear-gradient(to bottom, #d6ad6f, #C18E50);
   text-align: center;
-  min-height: 300px; }
-  @media only screen and (max-width: 414px) {
-    .rsvp {
-      padding-bottom: 40px; } }
+  min-height: 300px;
+}
+@media only screen and (max-width: 414px) {
+  .rsvp {
+    padding-bottom: 40px;
+  }
+}
 
 @keyframes lightbox-fade-in {
   from {
-    opacity: 0; }
+    opacity: 0;
+  }
   to {
-    opacity: 100%; } }
-
+    opacity: 100%;
+  }
+}
 #rsvpOpened {
   position: fixed;
   width: 100%;
@@ -194,16 +258,19 @@ h1 .parallax h1 h2 {
   z-index: 100;
   animation-name: lightbox-fade-in;
   animation-duration: 0.25s;
-  animation-timing-function: ease-in-out; }
+  animation-timing-function: ease-in-out;
+}
 
 .lightbox_content {
   overflow: scroll;
   width: 100%;
   height: 100%;
-  background: #ffffff; }
-  .lightbox_content .rsvp-content h3,
-  .lightbox_content .rsvp-content p {
-    padding: 10px 24px; }
+  background: #ffffff;
+}
+.lightbox_content .rsvp-content h3,
+.lightbox_content .rsvp-content p {
+  padding: 10px 24px;
+}
 
 .close {
   font-size: 2rem;
@@ -212,40 +279,52 @@ h1 .parallax h1 h2 {
   display: block;
   text-align: right;
   width: 24px;
-  float: right; }
-  .close:hover {
-    cursor: pointer; }
+  float: right;
+}
+.close:hover {
+  cursor: pointer;
+}
+
+span.material-symbols-outlined {
+  font-size: 14px;
+  padding-left: 4px;
+}
 
 .heart-button {
   background: none;
   border: none;
   position: relative;
   width: 8rem;
-  height: 3rem; }
-  .heart-button:hover .content {
-    color: #C18E50;
-    font-size: 12px;
-    top: -16px; }
-  .heart-button:hover .left {
-    border-top-left-radius: 1.5rem;
-    border-bottom-left-radius: 1.5rem;
-    border-top-right-radius: 0.5rem;
-    transform: rotate(45deg);
-    top: 0.75rem;
-    left: 0.5rem; }
-  .heart-button:hover .right {
-    border-top-right-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
-    border-top-left-radius: 0.5rem;
-    transform: rotate(-45deg);
-    top: 0.75rem;
-    right: 0.5rem; }
+  height: 3rem;
+}
+.heart-button:hover .content {
+  color: #C18E50;
+  font-size: 12px;
+  top: -16px;
+}
+.heart-button:hover .left {
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  border-top-right-radius: 0.5rem;
+  transform: rotate(45deg);
+  top: 0.75rem;
+  left: 0.5rem;
+}
+.heart-button:hover .right {
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  border-top-left-radius: 0.5rem;
+  transform: rotate(-45deg);
+  top: 0.75rem;
+  right: 0.5rem;
+}
 
 .left,
 .right,
 .content {
   transition: 0.25s ease-in-out all;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .left {
   background: #2c2a2a;
@@ -257,7 +336,8 @@ h1 .parallax h1 h2 {
   z-index: 50;
   transform-origin: bottom right;
   border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem; }
+  border-bottom-left-radius: 0.5rem;
+}
 
 .right {
   background: #2c2a2a;
@@ -269,7 +349,8 @@ h1 .parallax h1 h2 {
   z-index: 50;
   transform-origin: bottom left;
   border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem; }
+  border-bottom-right-radius: 0.5rem;
+}
 
 .content {
   font-size: 16px;
@@ -282,4 +363,7 @@ h1 .parallax h1 h2 {
   bottom: 0;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+}
+
+/*# sourceMappingURL=styles.css.map */

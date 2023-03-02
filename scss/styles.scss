@@ -80,29 +80,45 @@ p {
 
 // Nav
 
+
 .links {
 	width: 100%;
 	text-align: right;
 	position: fixed;
 	z-index: 10000;
 	background-color: $white;
-	padding: 16px 8px;
+	padding: 8px 0;
 
-	a {
+	.link-wrapper {
+		display: inline-flex;
+		align-items: center;
+	
+
+	a { 
+		display: inline-flex;
+		align-items: center;
 		text-decoration: none;
 		font-family: "Cormorant Garamond", serif;
 		font-size: 18px;
 		font-weight: 700;
 		color: $black;
-		padding: 16px 8px;
+		padding: 16px 12px;
 
 		&:hover {
 			opacity: 75%;
 		}
 
-		&:last-child {
-			padding-right: 40px;
+	}
+
+	&:last-child {
+		padding-right: 40px;
+
+		@media only screen and (max-width: 731px) {
+			padding-right: 0;
 		}
+
+	}
+
 	}
 
 	@media only screen and (max-width: 731px) {
@@ -328,6 +344,14 @@ h1 .parallax h1 h2 {
 	&:hover {
 		cursor: pointer;
 	}
+}
+
+// Material icons
+
+span.material-symbols-outlined {
+	font-size: 14px;
+	padding-left: 4px;
+
 }
 
 // CSS animation
